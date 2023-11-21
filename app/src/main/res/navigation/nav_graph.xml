@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/randomActivityFragment">
+
+    <fragment
+        android:id="@+id/randomActivityFragment"
+        android:name="com.example.kotlinflowplayground.views.fragments.RandomActivityFragment"
+        android:label="fragment_random_activity"
+        tools:layout="@layout/fragment_random_activity" >
+        <action
+            android:id="@+id/action_randomActivityFragment_to_randomActivityExpanded"
+            app:destination="@id/randomActivityExpanded"
+            app:popUpTo="@id/randomActivityFragment">
+           </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/randomActivityExpanded"
+        android:name="com.example.kotlinflowplayground.views.fragments.RandomActivityExpanded"
+        android:label="fragment_random_activity_expanded"
+        tools:layout="@layout/fragment_random_activity_expanded">
+        <argument android:name="myArgument"
+            app:argType="com.example.kotlinflowplayground.models.response.ActivityResponse"/>
+        <action
+            android:id="@+id/action_randomActivityExpanded_to_randomActivityFragment"
+            app:destination="@id/randomActivityFragment" />
+    </fragment>
+</navigation>
