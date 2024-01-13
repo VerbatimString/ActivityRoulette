@@ -6,9 +6,9 @@ Originally created in September 2022, in order to get familiar with Kotlin (as I
 
 Also explored the following libraries:
 
--Kotlin Flow
--Material Motion (shared transitions)
--Dagger/Hilt
+-Kotlin Flow <br />
+-Material Motion (shared transitions) <br />
+-Dagger/Hilt <br />
 
 The app layout was created using XML and view binding was used to connect UI with code.
 
